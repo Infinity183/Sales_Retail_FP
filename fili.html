@@ -25,21 +25,25 @@
 
 <body class="bodyAmanda">
     <!-- Nav bar goes here -->
-    <nav class="navbar navbar-expand-lg navbar-light navPat">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse  justify-content-end" id="navbarNavAltMarkup">
+    <nav class="navbar navbar-light bg-black justify-content-between navPat">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <form class="form-inline">
+            <a class="nav-item nav-link" href="fili.html">Finding the Meaningful Features</a>
+            <a class="nav-item nav-link" href="#">Markdown and Holiday Models</a>
+            <a class="nav-item nav-link" href="Sales_Size.html"> Size v.s Sales Model</a>
+            <a class="nav-item nav-link" href="#"> Future Sales Model</a>
+        </form>
+    </nav>
+        <!-- <div class="collapse navbar-collapse  justify-content-end" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#">Home</a>
+                <a class="nav-item nav-link active" href="#" >Home</a>
                 <a class="nav-item nav-link" href="fili.html">Finding the Meaningful Features</a>
                 <a class="nav-item nav-link" href="#">Markdown and Holiday Models</a>
                 <a class="nav-item nav-link" href="#"> Size v.s Sales Model</a>
                 <a class="nav-item nav-link" href="#"> Future Sales Model</a>
                 <!-- <a class="nav-item nav-link" href="#">test</a> -->
             </div>
-        </div>
+        </div> -->
     </nav>
     <div class="container centerPat">
         <!-- <div class="row justify-content-center">
@@ -50,7 +54,7 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-xs-12 col-md-9 borderPat">
+            <div class="col-xs-12 col-md-9 ">
                 <div class="article">
                     <h2 class="text-center">Finding Meaningful Features  </h2>
                     <p>The values show the correlation score between the row and column at each point. 
@@ -61,7 +65,7 @@
                 </div>
                 <div class="article">
                     <h3 class="text-center"></h3>
-                    <p>After training and testing our model, we can see the traning, testing and r2 scores are low. One possible explantation for this is the presence of several anti-correlated variables as seen in the heatmap. The presence of temperature, fuel price and unemployment are negatively effecting the model since these variables have almost no relation to weekly sales. From this, we can confidently eliminate these variables from further analysis.
+                    <p>After training and testing our model, we can see the traning, testing and R2 scores are low. One possible explantation for this is the presence of several anti-correlated variables as seen in the heatmap. The presence of temperature, fuel price and unemployment are negatively effecting the model since these variables have almost no relation to weekly sales. From this, we can confidently eliminate these variables from further analysis.
                     </p>
                     <img src="Images/Residual_Plot.png" width="600" height="600">
                     <img src="Images/Scores.png" width="300" height="75" style="vertical-align:top" >
