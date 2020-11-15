@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Retail Sales</title>
+    <!-- Main css -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+        integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+        crossorigin="" />
+    <!-- Marker Cluster CSS -->
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css">
+    <!-- Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- Chartjs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+</head>
+
+<body class="bodyAmanda">
+    <!-- Nav bar goes here -->
+    <nav class="navbar navbar-light bg-black justify-content-between navPat">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <form class="form-inline">
+            <a class="nav-item nav-link" href="fili.html">Finding the Meaningful Features</a>
+            <a class="nav-item nav-link" href="amanda.html">Markdown and Holiday Models</a>
+            <a class="nav-item nav-link" href="Sales_Size.html"> Size v.s Sales Model</a>
+            <a class="nav-item nav-link" href="#"> Future Sales Model</a>
+        </form>
+    </nav>
+        <!-- <div class="collapse navbar-collapse  justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#" >Home</a>
+                <a class="nav-item nav-link" href="fili.html">Finding the Meaningful Features</a>
+                <a class="nav-item nav-link" href="#">Markdown and Holiday Models</a>
+                <a class="nav-item nav-link" href="#"> Size v.s Sales Model</a>
+                <a class="nav-item nav-link" href="#"> Future Sales Model</a>
+                <a class="nav-item nav-link" href="#">test</a> -->
+            </div>
+        </div>
+    </nav>
+    <div class="container centerPat">
+        <!-- <div class="row justify-content-center">
+            <div class="col-xs-12 col-md-9 borderPat">
+                <div id="plot" class="plot text-center"> -->
+                    <!-- <img src="../Images/HomePage.jpg" , class="img-fluid"> -->
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-xs-12 col-md-9 ">
+                <div class="article">
+                    <h2 class="text-center">Finding Meaningful Features  </h2>
+                    <p>The values show the correlation score between the row and column at each point. 
+                      Values will range from 1 (very strong positve correlation, as one goes up, the other tends to, too) to -1 (very strong negative correlation, one goes up will tend to push the other down, or vice-versa), via 0 (no relationship). In our dataset, we can see that the 'MarkDown' and the 'Unemployment' being the most correlated and anti-correlate variables respectively.
+                    </p>
+                    <img src="../Images/variable_correlation_heatmap.png" width="600" height="600">
+                    <img src="../Images/Correlation_Table_fil.png" width="300" height="200" style="vertical-align:top">
+                </div>
+                <div class="article">
+                    <h3 class="text-center"></h3>
+                    <p>After training and testing our model, we can see the traning, testing and R2 scores are low. One possible explantation for this is the presence of several anti-correlated variables as seen in the heatmap. The presence of temperature, fuel price and unemployment are negatively effecting the model since these variables have almost no relation to weekly sales. From this, we can confidently eliminate these variables from further analysis.
+                    </p>
+                    <img src="../Images/Residual_Plot_fili.png" width="600" height="600">
+                    <img src="../Images/Scores_fili.png" width="300" height="75" style="vertical-align:top" >
+            </div>
+        </div>
+    </div>
+    <div>
+        <!-- Bootstrap -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+        <!-- D3 -->
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+        
+    </div>
+</body>
+
+</html>
