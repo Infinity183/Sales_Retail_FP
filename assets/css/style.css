@@ -1,0 +1,68 @@
+/* Color vars */
+/*  Main color: Aquamarine
+    Second color: Aqua */
+
+:root {
+    --color1: #0c0c0b;
+    --color2: #0ec7f5;
+    --color3: #272a15;
+    --color4: #0edeec;
+    --color5: #b6dac5;
+}
+
+.bodyAmanda {
+    background-color: var(--color1);
+}
+
+.borderPat {
+    border-width: thick;
+    border-style: solid;
+    border-color: var(--color2);
+    border-radius: 5px;
+    margin: 5px;
+    box-shadow: 5px 5px 5px var(--color3);
+}
+
+.navPat {
+    background-color: var(--color1);
+    border-bottom: var(--color2);
+    border-style: solid;
+    margin-bottom: 5px;
+    box-shadow: 5px 5px 5px var(--color3);
+}
+
+.text-center {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.centerPat {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.plot {
+    height: auto;
+}
+
+.article {
+    color: var(--color5);
+}
+
+.navbar-brand {
+    color: var(--color5)!important;
+}
+
+.nav-item {
+    color: var(--color5)!important;
+}
+
+.active {
+    font-weight: bold;
+}
+
+img {
+    position: relative;
+}
