@@ -1,0 +1,4 @@
+Features.csv filter=lfs diff=lfs merge=lfs -text
+Official_Merged_SF.csv filter=lfs diff=lfs merge=lfs -text
+Sales.csv filter=lfs diff=lfs merge=lfs -text
+Stores.csv filter=lfs diff=lfs merge=lfs -text
