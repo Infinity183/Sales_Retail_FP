@@ -10,8 +10,8 @@ Machine Learning is an extremely useful tool that uses statistics in order to fi
 
 ## Models
 
-# Conclusions
+# Conclusions:
 
-# Website
+# Website:
 https://akplesa.github.io/Sales_Retail_FP/index.html
 
