@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Retail Sales</title>
     <!-- Main css -->
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -26,26 +25,20 @@
 
 <body class="bodyAmanda">
     <!-- Nav bar goes here -->
-    <nav class="navbar navbar-light bg-black justify-content-between navPat">
+      <nav class="navbar navbar-light bg-black justify-content-between navPat">
         <a class="navbar-brand" href="index.html">Home</a>
         <form class="form-inline">
             <a class="nav-item nav-link" href="fili.html">Finding the Meaningful Features</a>
             <a class="nav-item nav-link" href="amanda.html">Markdown and Holiday Models</a>
             <a class="nav-item nav-link" href="Sales_Size.html"> Size v.s Sales Model</a>
-            <a class="nav-item nav-link" href="#"> Future Sales Model</a>
+            <a class="nav-item nav-link" href="jacqueline.html"> Future Sales Model</a>
         </form>
     </nav>
-        <!-- <div class="collapse navbar-collapse  justify-content-end" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#" >Home</a>
-                <a class="nav-item nav-link" href="fili.html">Finding the Meaningful Features</a>
-                <a class="nav-item nav-link" href="#">Markdown and Holiday Models</a>
-                <a class="nav-item nav-link" href="#"> Size v.s Sales Model</a>
-                <a class="nav-item nav-link" href="#"> Future Sales Model</a>
-                <a class="nav-item nav-link" href="#">test</a> -->
-            </div>
+
+                <!-- <a class="nav-item nav-link" href="#">test</a> -->
+            <!-- </div>
         </div>
-    </nav>
+    </nav> -->
     <div class="container centerPat">
         <!-- <div class="row justify-content-center">
             <div class="col-xs-12 col-md-9 borderPat">
@@ -57,19 +50,34 @@
         <div class="row justify-content-center">
             <div class="col-xs-12 col-md-9 ">
                 <div class="article">
-                    <h2 class="text-center">Finding Meaningful Features  </h2>
-                    <p>The values show the correlation score between the row and column at each point. 
-                      Values will range from 1 (very strong positve correlation, as one goes up, the other tends to, too) to -1 (very strong negative correlation, one goes up will tend to push the other down, or vice-versa), via 0 (no relationship). In our dataset, we can see that the 'MarkDown' and the 'Unemployment' being the most correlated and anti-correlate variables respectively.
+                    <h2 class="text-center">Linear Regression Model</h2>
+                    <p>The goal of this model was to predict how markdowns effect weekly sales. 
                     </p>
-                    <img src="../Images/variable_correlation_heatmap.png" width="600" height="600">
-                    <img src="../Images/Correlation_Table_fil.png" width="300" height="200" style="vertical-align:top">
+                    <p> The X_test_scaled and y_test_scaled from the model were used to calculate the R2 Value and Mean Standard Error. 
+                      The R2 result in this model shows that 74% of the variance for weekly sales is explained by markdowns while the MSE shows 38% error.</p>
+                    <img src="Images/R2MSE.png" width="1000" height="100" style="vertical-align:top">
+                    <img src="Images/Linearregression_residualplotAP.jpg" width="400" height="400">
+
                 </div>
                 <div class="article">
-                    <h3 class="text-center"></h3>
-                    <p>After training and testing our model, we can see the traning, testing and R2 scores are low. One possible explantation for this is the presence of several anti-correlated variables as seen in the heatmap. The presence of temperature, fuel price and unemployment are negatively effecting the model since these variables have almost no relation to weekly sales. From this, we can confidently eliminate these variables from further analysis.
-                    </p>
-                    <img src="../Images/Residual_Plot_fili.png" width="600" height="600">
-                    <img src="../Images/Scores_fili.png" width="300" height="75" style="vertical-align:top" >
+                    <h3 class="text-center">K Knearest Neighbor Model </h3>
+                    <p> Our goal for using this algorithm is to show how it can be used for classification. Since our only categorical values were "Isholiday": True/False
+                        weekly sales and markdowns were used to prefict whether "it is a holiday" or "isnt a holiday."" </p>
+                        <h4 class= "text center" >Bar Chart</h4>
+                    <p>This bar graph displays which stores have the greatest and least average yearly sales for the years 2011 
+                        and 2012. Five stores are used for the KNN-clasifier algorithm.  </p>
+                        <p> 1. The top 2 stores with max sales(10,14).</p>
+                        <p>2. The top 2 stores with min sales (5,33).</p>
+                        <p>3. One store with average sales (28). </p>
+                        <!-- <div class="row justify-content-center"> -->
+                    <img src="Images/Bar_chart.jpg" width="1000" height="200">
+                        <!-- </div> -->
+                    <h4 class= "text center" > Evaluating Model</h4>
+                    <p> According to the confusion matrix we can see that 3510 of predicted sales and markdowns are not on holidays and 289 are on holidays. Furthermore, there are 30 sales and markdowns not on holidays that are incorrect. 
+                        <p>The f_1 score is at a 95% accuracy and the accuracy score is at 99% which is really high. 
+                        According to the KNN algorithm our model is at 99% accuracy. </p>
+                    <img src="Images/confusion.png" width="250" height="250">
+                    <img src="Images/KNN_results.png" width="250" height="250" style="vertical-align:top" >
             </div>
         </div>
     </div>
